@@ -153,7 +153,7 @@ def post_anak():
                     'message': "Value tidak sesuai untuk 'jk'. Data harus 'Laki-laki' or 'Perempuan'."
                 }), HTTPStatus.BAD_REQUEST
             cur = mysql.connection.cursor()
-            cur.execute('''INSERT INTO anak (nama, nama_ibu, jenis_kelamin) VALUES (%s, %s, %s)''', (nama, nama_ibu, jk))
+            cur.execute('''INSERT INTO anak (nama, nama_ibu, jk) VALUES (%s, %s, %s)''', (nama, nama_ibu, jk))
             mysql.connection.commit()
             cur.close()
             return jsonify({
