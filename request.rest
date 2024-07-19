@@ -1,0 +1,56 @@
+###
+
+GET http://localhost:3000/
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/predict
+Content-Type: application/json
+
+{
+    "id_anak": 1,
+    "tb": 127.7,
+    "bb": 25.35,
+    "usia": 60
+}
+
+###
+
+GET http://localhost:3000/anak
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/anak
+Content-Type: application/json
+
+{
+    "nama": "Putra",
+    "nama_ibu": "Sri",
+    "jk": "Laki-laki"
+}
+
+###
+
+GET http://localhost:3000/history
+Content-Type: application/json
+
+###
+
+GET http://localhost:3000/history/1
+Content-Type: application/json
+
+###
+
+POST http://localhost:3000/history
+Content-Type: application/json
+
+{
+    "id_anak": 1,
+    "tanggal": "2024-08-01",
+    "tb": 120.5,
+    "bb": 25.35,
+    "usia": 40,
+    "kondisi": "Normal"
+}
