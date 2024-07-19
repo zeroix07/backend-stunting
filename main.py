@@ -73,15 +73,16 @@ def prediksi():
             max_index = np.argmax(response)
             conditions = ['Stunting', 'Normal', 'Obesitas']
             condition = conditions[max_index] if max_index < len(conditions) else 'Not found'
+            percentage = response[0][max_index] * 100 
             return jsonify({
                 'code': HTTPStatus.OK,
                 'message': 'Berhasil predicting',
                 'data': {
                     'imt': imt,
+                    'persentase': percentage,
                     'kondisi': condition
                 }
             }), HTTPStatus.OK
-        
         except KeyError as e:
             return jsonify({
                 'code': HTTPStatus.BAD_REQUEST,
