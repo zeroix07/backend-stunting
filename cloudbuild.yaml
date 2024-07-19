@@ -21,7 +21,7 @@ steps:
       - '--min-instances=0'
       - '--max-instances=2'
       - '--allow-unauthenticated'
-      - '--set-secrets=DATABASE_URL=database_url:latest,GCP_BUCKET_NAME=gcp_bucket_name:latest'
+      - '--set-secrets=DATABASE_URL=database_url_stunting:latest,GCP_BUCKET_NAME=gcp_bucket_name:latest'
 images:
   - 'asia-southeast2-docker.pkg.dev/$PROJECT_ID/bjir-artifact/stunting:$COMMIT_SHA'
 logsBucket: 'gs://bucket-adit-ganteng/logs'
